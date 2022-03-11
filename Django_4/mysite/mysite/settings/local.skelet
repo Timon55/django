@@ -1,0 +1,16 @@
+# подставить значения вместо ...
+
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+SECRET_KEY = '...'
+
+DEBUG = True
+
+DATABASES = {
+    'default': {
+        'ENGINE': '...',
+        'NAME': '...',
+    }
+}
