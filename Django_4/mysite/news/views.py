@@ -9,6 +9,7 @@ class NewsList(ListView):
     model = News
     context_object_name = 'news'
     template_name = 'index.html'
+    paginate_by = 3
 
     # переопределение родительской функции для фильтрации записей
     def get_queryset(self):
@@ -20,7 +21,7 @@ class NewsCategoryList(ListView):
     context_object_name = 'news'
     template_name = 'category.html'
     allow_empty = False
-
+    paginate_by = 3
     # переопределение родительской функции для фильтрации записей
     def get_queryset(self):
        return News.objects.filter(category_id=self.kwargs['category_id'], is_published=True)
